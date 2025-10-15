@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "betterlogger"
+version = "0.0.1"
+authors = [
+  { name="Rejey Ezekiel Jeyakumar", email="rehxxz@gmail.com" },
+]
+description = "A easier way to log data to database or files when building applications fast."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/REHXZ/Better_Logger"
+Issues = "https://github.com/REHXZ/Better_Logger/issues"
