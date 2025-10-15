@@ -8,11 +8,11 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 's
 
 from betterlogger.main import Logger
 
-my_logger = Logger()
+my_logger = Logger(log_file_name="System",log_dir="./logs")
 
-@my_logger.log(include_database=False)
+@my_logger.log()
 def add_numbers(a, b):
-    my_logger.logging("DUMB DUMB",log_level="INFO")
+    my_logger.logging("DUMB DUMB",log_level="ERROR")
     print("Inside add_numbers")
     return a + b
 
@@ -28,7 +28,7 @@ def slow_function():
     return "Done!"
 
 if __name__ == "__main__":
-    add_numbers(5, 3)
+    add_numbers(5, 2)
     greet("Alice")
     greet("Bob", greeting="Hi")
     slow_function()
