@@ -3,8 +3,8 @@ requires = ["hatchling >= 1.26"]
 build-backend = "hatchling.build"
 
 [project]
-name = "betterlogger"
-version = "0.0.2"
+name = "bester-logger"
+version = "0.0.3"
 authors = [
   { name="Rejey Ezekiel Jeyakumar", email="rehxxz@gmail.com" },
 ]
