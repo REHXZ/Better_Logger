@@ -427,6 +427,7 @@ MIT License - See LICENSE file for details
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+Please Update the pyproject.toml version to the next iteration before running the github action, if the version is the same as previously stated it will not run.
 
 ## 📞 Support
 
