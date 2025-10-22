@@ -3,14 +3,13 @@ from time import time
 import dotenv
 import os
 import sys
-
 from openai import AzureOpenAI
-# Add the src directory to the Python path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
 
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
+dotenv.load_dotenv()
 from betterlogger.main import Logger
 
-my_logger = Logger(log_file_name="System",log_dir="./logs", include_database=True, database_name="", database_username="", database_password="", database_server="", table_name="")
+my_logger = Logger(log_file_name="System",log_dir="./logs", include_database=True, database_name=os.getenv("invoice_database_A"), database_username=os.getenv("invoice_username_A"), database_password=os.getenv("invoice_password_A"), database_server=os.getenv("invoice_server_A"), table_name="ConsumptioLogs")
 
 @my_logger.log()
 def add_numbers(a, b):
