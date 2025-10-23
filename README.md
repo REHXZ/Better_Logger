@@ -1,5 +1,8 @@
 # Bester Logger
-![alt text](https://github.com/REHXZ/bester-logger/blob/main/BESTER%20LOGGER.png)
+<picture align="center">
+  <img alt="Bester Logger Logo" src="https://github.com/REHXZ/bester-logger/blob/main/BESTER%20LOGGER.png">
+</picture>
+
 A powerful Python logging library that makes it easy to track function execution, errors, and AI interactions. Perfect for debugging, monitoring, and auditing your applications.
 
 ## ✨ Features
