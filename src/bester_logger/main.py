@@ -69,7 +69,7 @@ class Logger:
             return text
         
         message = clean_unicode_text(message)
-        with open(log_file, 'w', encoding='utf-8') as f:
+        with open(log_file, 'a', encoding='utf-8') as f:
             f.write(timestamp + " - " + log_level + " - " + message + "\n")
         
         if self.log_to_console:
