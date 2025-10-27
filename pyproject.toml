@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "bester-logger"
-version = "0.0.8"
+version = "0.0.9"
 authors = [
   { name="Rejey Ezekiel Jeyakumar", email="rehxxz@gmail.com" },
 ]
@@ -12,7 +12,7 @@ description = "A easier way to log data to database or files when building appli
 readme = "README.md"
 requires-python = ">=3.9"
 classifiers = [
-    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3",    
     "Operating System :: OS Independent",
 ]
 dependencies = [

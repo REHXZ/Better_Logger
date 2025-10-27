@@ -7,9 +7,9 @@ from openai import AzureOpenAI
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
 dotenv.load_dotenv()
-from betterlogger.main import Logger
+from bester_logger.main import Logger
 
-my_logger = Logger(log_file_name="System",log_dir="./logs", include_database=True, database_name=os.getenv("invoice_database_A"), database_username=os.getenv("invoice_username_A"), database_password=os.getenv("invoice_password_A"), database_server=os.getenv("invoice_server_A"), table_name="ConsumptioLogs")
+my_logger = Logger(log_file_name="System",log_dir="./logs", include_database=True, database_name=os.getenv("invoice_database_A"), database_username=os.getenv("invoice_username_A"), database_password=os.getenv("invoice_password_A"), database_server=os.getenv("invoice_server_A"), table_name="ConsumptionLogs")
 
 @my_logger.log()
 def add_numbers(a, b):

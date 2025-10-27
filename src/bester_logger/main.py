@@ -60,7 +60,16 @@ class Logger:
 
         timestamp = datetime.now().strftime("%d %B %Y %H:%M:%S") + f".{datetime.now().microsecond // 1000:03d}"
         
-        with open(log_file, "a") as f:
+        def clean_unicode_text(text):
+            if isinstance(text, str):
+                # Replace non-breaking hyphen and other problematic chars
+                text = text.replace('\u2011', '-')  # Replace with regular hyphen
+                # Or remove other problematic Unicode chars
+                text = text.encode('utf-8', errors='ignore').decode('utf-8')
+            return text
+        
+        message = clean_unicode_text(message)
+        with open(log_file, 'w', encoding='utf-8') as f:
             f.write(timestamp + " - " + log_level + " - " + message + "\n")
         
         if self.log_to_console:
